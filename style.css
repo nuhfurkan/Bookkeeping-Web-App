@@ -1,0 +1,185 @@
+html, body {
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.navBar {
+    overflow: scroll;
+    width: 25%;
+    background-color: red;
+    height: 100%;
+}
+
+.content {
+    overflow: scroll;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    background-color: blue;
+    height: 100%;
+}
+
+.mainDiv {
+    overflow: auto;
+    display: flex;
+    height: 100%;
+    align-items: stretch;
+}
+
+.navBarItems {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navBarTop {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    margin: auto;
+}
+
+.navBarEnd {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    margin: auto;
+}
+
+.navBarBottom {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    margin: auto;
+}
+
+.yeniKisiDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.yeniDövizDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+th {
+    text-align: left;
+    color: white;
+}
+
+th, td {
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+}
+
+.tableDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5%;
+}
+
+.tableView {
+    padding: 3px;
+    border: 0px;
+    border-collapse: collapse;
+    width: 90%;
+}
+
+.tBox {
+    width: 100%;
+}
+
+.tr, th {
+    border: 0px;
+}
+
+.contentTop {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 5%;
+}
+
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* The actual popup */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+  }
+  
+  /* Popup arrow */
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  /* Toggle this class - hide and show the popup */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+
+  .tableView2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-top: 5%;
+    background-color: aqua;
+  }
+
+  .kasabalanceclass {
+      width: 100%;
+  }

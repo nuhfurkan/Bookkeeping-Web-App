@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body onload="bodyInit()">
+    <div class="mainDiv">
+        <div class="navBar">
+
+            <div class="navBarEnd">
+                
+                <p class="navBarItems">
+                    Yeni Islem
+                </p>
+    
+                <label class="navBarItems" for="kisiListesi">Kisi seciniz:</label>
+                <select class="navBarItems" name="kisiListesi" id="islemKisiListesi"></select>
+                
+                <label class="navBarItems" for="dövizListesi">Döviz seciniz:</label>
+                <select class="navBarItems" name="dövizListesi" id="islemDövizListesi"></select>
+                
+                <label class="navBarItems" for="islemler">Islem seciniz:</label>
+                <select class="navBarItems" name="islemler" id="islemTuru">
+                    <option value="tahsil">tahsil</option>
+                    <option value="ödeme">ödeme</option>
+                </select>
+
+                <label class="navBarItems" for="tutar">Tutar: </label>
+                <input class="tBox" type="text" name="tutar" id="islemTutar">
+
+                <label class="navBarItems" for="description" >Aciklama giriniz:</label>
+                <textarea class="navBarItems" id="description" name="description" rows="2"></textarea>
+                
+                <input onclick="yeniIslemOlustur()" class="navBarItems" type="button" value="Islem Yap">
+                
+            </div>
+
+            <div class="navBarTop">
+                <hr style="width: 100%; height: 2px; border: 0ch; background-color: black;">
+                <p class="navBarItems">
+                    Arama icin asagiyi doldurun!!!
+                </p>
+    
+                <label class="navBarItems" for="kisiListesi">Kisi seciniz:</label>
+                <select onchange="showData()" class="navBarItems" name="kisiListesi" id="kisiListesi"></select>
+                
+                <label class="navBarItems" for="dövizListesi">Döviz seciniz:</label>
+                <select onchange="showData()" class="navBarItems" name="dövizListesi" id="dövizListesi"></select>
+                
+                <label class="navBarItems" for="islemler">Islem seciniz:</label>
+                <select onchange="showData()" class="navBarItems" name="islemler" id="islemler">
+                    <option value="hepsi">hepsi</option>
+                    <option value="tahsil">tahsil</option>
+                    <option value="ödeme">ödeme</option>
+                </select>
+                
+                <input onclick="showData()" class="navBarItems" type="button" value="Arama Yap">
+            </div>
+
+            <div class="navBarBottom">
+                <hr style="width: 100%; height: 2px; border: 0ch; background-color: black;">
+                <div class="yeniKisiDiv">
+                    
+                    <p class="">Yeni kisi olustur</p>
+
+                    <label class="navBarItems" for="yeniKisiIsim">Yeni Kisi Ismi:</label>
+                    <input class="" type="text" name="yeniKisiIsim" id="yeniKisiIsim">
+                    
+                    <input class="navBarItems" id="kisiBtn" type="button" onclick="yeniKisiOlustur()" value="Yeni Kisi Olustur">
+                </div>
+
+                <div class="yeniDövizDiv">
+                    <hr style="width: 100%; height: 2px; border: 0ch; background-color: black;">
+                    <p class="">Yeni döviz olustur</p>
+
+                    <label class="navBarItems" for="yeniDövizIsim">Yeni döviz Ismi:</label>
+                    <input class="" type="text" name="yeniDövizIsim" id="yeniDovizIsim">
+
+                    <input class="navBarItems" id="dövizBtn" type="button" onclick="yeniDovizOlustur()" value="Yeni Döviz Olustur">
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="tableDiv">
+                <table id="kasabalance" class="tableView">
+                    <tr>
+                        <th>aciklama</th>
+                        <th>tarih</th>
+                        <th>isim</th>
+                        <th>tutar</th>
+                        <th>cins</th>
+                        <th>sil</th>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableDiv">
+                <table id="contentTable" class="tableView">
+                    <tr>
+                        <th>aciklama</th>
+                        <th>tarih</th>
+                        <th>isim</th>
+                        <th>tutar</th>
+                        <th>cins</th>
+                        <th>sil</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
